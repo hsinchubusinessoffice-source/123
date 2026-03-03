@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>讀書小組 活動通知</title>
+    <style>
+        /* 全域樣式 & 手機自適應基礎 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            background: #f7f9fc;
+            padding: 10px;
+            line-height: 1.8;
+        }
+        /* 容器樣式（自適應） */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        /* 標題樣式 */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: clamp(1.5rem, 3vw, 2rem); /* 自適應字體大小 */
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+        /* 按鈕樣式 */
+        .btn {
+            display: block;
+            width: 200px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px auto;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        /* 基礎資訊樣式 */
+        .info {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: #333;
+        }
+        .item {
+            margin: 15px 0;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        /* 詳情頁面樣式（預設隱藏） */
+        .detail-page {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .detail-title {
+            color: #2c3e50;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .detail-content {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: #333;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        /* 返回按鈕 */
+        .back-btn {
+            background: #95a5a6;
+        }
+        .back-btn:hover {
+            background: #7f8c8d;
+        }
+
+        /* 手機端適配調整 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .btn {
+                width: 180px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+            }
+            .item {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 基礎資訊頁面 -->
+        <div class="basic-page">
+            <h1>讀書小組 活動通知</h1>
+            <div class="subtitle">一起讀書、互相激勵、高效學習</div>
+
+            <div class="info">
+                <div class="item">
+                    <strong>活動名稱：</strong>讀書小組（互助學習交流）
+                </div>
+                <div class="item">
+                    <strong>適合對象：</strong>所有會計丙級學員
+                </div>
+                <div class="item">
+                    <strong>人數限制：</strong>每組5人
+                </div>
+                <div class="item">
+                    <strong>活動時間：</strong>每週六下午 15:00–17:00
+                </div>
+                <div class="item">
+                    <strong>活動地點：</strong>讀書課室 / 公共區
+                </div>
+                <div class="item">
+                    <strong>活動內容：</strong>課程重點整理、題目討論、觀念釐清、讀書進度互相督促
+                </div>
+                <div class="item">
+                    <strong>參加方式：</strong>至「活動通知」報名，由工作人員統一編組
+                </div>
+                <div class="item">
+                    <strong>支付方式：</strong>可使用<span class="highlight">3000元神幣</span>抵扣相關服務費用
+                </div>
+            </div>
+
+            <button class="btn" id="detailBtn">查看詳情</button>
+        </div>
+
+        <!-- 詳情頁面（包含兩張圖片的文字內容） -->
+        <div class="detail-page" id="detailPage">
+            <h2 class="detail-title">115年地政士專業證照小班制「學習型組織讀書會」募集中！</h2>
+            
+            <div class="detail-content">
+                <strong>一、報名、考試時程及考科：</strong>115年地政士2月24日至3月5日報名，6月6日、7日考試，請上考選部「國家考試網路報名資訊系統」準時報考。考科及題型：普通科目10%國文(引導作文2題，理性與感性各1題)，專業科目90%四科：1.民法概要與信託法概要；2.土地法規(土地法及其施行法、平均地權條例及其施行細則、土地徵收條例及其施行細則、地政士法及其施行細則)；3.土地登記實務(土地登記規則、土地登記之申辦與作業程序、地籍測量實施規則中第三編土地複丈、地籍測量實施規則中第四編建築改良物測量、土地測量之申辦與作業程序)；4.土地稅法規(土地稅法及其施行細則、遺產及贈與稅法及其施行細則、契稅條例與房屋稅條例、稅捐稽徵法及其施行細則、工程受益費徵收條例、所得稅法及其施行細則之不動產交易部分)，採全申論題每科考4題，總成績60分及格，快速理解吸收命題重點，反覆勤練歷屆25年份申論題解，掌握其論述技巧，投資其所延伸之重要法條(一考再考)，是高分上榜的重要關鍵及必經之路！
+            </div>
+
+            <div class="detail-content">
+                <strong>二、超強師資專業領讀人：</strong>張博士(考試院閱卷委員、國家文官學院講座、高考法制、公證人錄取、地政士國考名列前茅、不動產營業員、租賃住宅管理人員、臺北市危老重建推動師證照、大學財經法律系所助理教授、臺中市不動產經紀人公會法制諮詢顧問、各大公(工)會、文教機構、地政機關講座，地政士事務所所長、知識管理顧問公司總經理，指導國家考試30多年經驗豐富)，親自指導領讀。
+            </div>
+
+            <div class="detail-content">
+                <strong>三、讀書會理念、目標：</strong>地政士業務範圍及核心能力，代理申請土地登記與土地測量事項、代理申請與土地登記有關之稅務與公證、認證事項、代理申請土地法規規定之提存事項、代理撰擬不動產契約或協議與簽證事項。面對臺灣社會超高齡、少子化大勢所趨之危機，地政士身為非訟之「契約法律人」，應化危機為商機，預防法律風險於前，協助客戶資產傳承、樂活善生，諸如：生前贈與加信託、意定監護、遺囑信託、以房養老、危老重建、傳承節稅等客製化規劃及執行。考取地政士專業證照，可自行開業或受雇，創造差異化價值與職涯發展新契機，有助提升您的專業形象，獲得客戶信賴，開創前(錢)途。抗通膨、打炒房、斜槓人生時代，投資自我，永不嫌遲，是最棒的投資！本會歡迎自主學習願接受個別指導者，共讀共學共好，擴展學習視野，是您國考路上的加油站，正向激勵，使您不再「孤讀」！幫助您終身學習，提升職涯競爭力，目標導向，釐清觀念，精準學習，口語解說，「先理解→再記憶」，協助您快速掌握重點，增強知識統整及解題能力，高效能金榜題名，向上提升為專業人士！
+            </div>
+
+            <div class="detail-content">
+                <strong>四、運作模式：</strong>小班制每班6至8人實體聚會，共讀階段採「一本書主義」，依科目進度，精讀突破25年份歷屆試題命題重點，熟練各科解題技巧，專業導讀歷屆考題所延伸之高投資報酬率常考法條、最新法令修訂、熱門時事爭(考)點，另贈全真模擬考(專業科目及國文)實戰演練、批改檢討。從輸入→轉換→輸出→反饋，發揮知識管理系統整合學習型組織綜效。
+            </div>
+
+            <div class="detail-content">
+                <strong>五、場次時段及聚會地點：</strong>115年1月至2月間，展開春季攻勢，集中火力，報名前即可完成「超前部署」，以周末假日班時段為主：每星期六下午2：00至5：00，晚上6：40至9：40；星期日下午2：00至5：00，晚上6：40至9：40，請預留115年1月3日(星期六下午、晚上)、1月4日(星期日下午、晚上)、1月10日(星期六下午、晚上)、1月11日(星期日下午、晚上)、1月17日(星期六下午、晚上)、1月18日(星期日下午、晚上)、1月25日(星期日下午、晚上)、1月31日(星期六下午、晚上)、2月1日(星期日下午、晚上)、2月7日(星期六下午、晚上)、2月8日(星期日下午、晚上)、2月28日(星期六下午、晚上)，如有變動將另行通知。客製化量身打造符合您學習特質的專屬高CP值優化方案，聚會地點：台中市西屯區朝馬一街28號7樓之3(太舜如意)，現場提供飲料、點心，互動共學，提升效率，即時解惑，營造不同於補習班的讀書共學氛圍。
+            </div>
+
+            <div class="detail-content">
+                <strong>六、堂數及費用：</strong>1.堂數：總時數72小時以上，另發重點秘笈、解題示範、隨堂演練、實務案例等獨門資料，超強師資由張博士親自指導，專業領讀！2.費用：含獨門補充講義費、場地費、領讀人專業諮詢費等，另贈全真模擬考(專業科目及國文)實戰演練、批改檢討，實收16800元，費用採「全部預收」制，依現場實際運作狀況，總時數通常會超過，不再多收費用。如中途有事請假無法參加，可採完整錄音檔補課及接收板書影像檔。可先免費試聽並與張博士當面諮詢後，再報名匯款！國泰世華南投分行，銀行代號013，帳號：108-50-001455-1，戶名：張智聖，匯款後請保留交易明細，並以E-mail或LINE告知，以利聯絡及客製化知識服務。
+            </div>
+
+            <div class="detail-content">
+                <strong>七、共讀書單：</strong>(一)法典：許文昌主編，土地法規法典，2025年9月，元照出版；(二)考古題庫一本書主義：許文昌、曾文田編著，地政士(114至90年)歷屆試題精解，2025年9月14版，高點文化出版。參加者請先另外自行購買上述「共讀書單」共2本最新版書籍，聚會時一起攜帶，專業導讀，共學重點。
+            </div>
+
+            <div class="detail-content">
+                <strong>八、免費試聽：</strong>請加LINE 0935367218或寄E-mail：560820@gmail.com先預約您方便時段以利安排，現場贈送「2026年最新地政士考試指引」！歡迎您來體驗！非常感謝您的推薦與支持，祝福您：萬事如意！金榜題名！
+            </div>
+
+            <button class="btn back-btn" id="backBtn">返回</button>
+        </div>
+    </div>
+
+    <script>
+        // 獲取按鈕和頁面元素
+        const detailBtn = document.getElementById('detailBtn');
+        const backBtn = document.getElementById('backBtn');
+        const basicPage = document.querySelector('.basic-page');
+        const detailPage = document.getElementById('detailPage');
+
+        // 點擊「查看詳情」按鈕，切換到詳情頁
+        detailBtn.addEventListener('click', function() {
+            basicPage.style.display = 'none';
+            detailPage.style.display = 'block';
+        });
+
+        // 點擊「返回」按鈕，切換回基礎資訊頁
+        backBtn.addEventListener('click', function() {
+            detailPage.style.display = 'none';
+            basicPage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
